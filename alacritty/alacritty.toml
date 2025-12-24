@@ -1,0 +1,13 @@
+[general]
+working_directory = "%USERPROFILE%"
+import = [
+    "./cyberpunkNeon-Theme.toml",
+    "./font.toml",
+    "./terminal.toml",
+    "./window.toml",
+    "./keyboard.toml",
+]
+
+
+# LIKES
+# ./cyberpunkNeon-Theme.toml

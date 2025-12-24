@@ -1,0 +1,8 @@
+[keyboard]
+bindings = [
+    { key = "Slash", mods = "Control", chars = "\u001f" },
+    { key = "C", mods = "Control|Shift", action = "Copy" },
+    { key = "V", mods = "Control|Shift", action = "Paste" },
+    { key = "-", mods = "Control", action = "DecreaseFontSize" },
+    { key = "^", mods = "Control", action = "IncreaseFontSize" },
+]
