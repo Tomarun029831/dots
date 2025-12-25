@@ -18,5 +18,27 @@
 # them for future reference.
 
 $env.config.show_banner = false;
-
 $env.config.shell_integration.osc133 = false
+
+def create_left_prompt [] {
+    let is_nvim = ($env | get -o NVIM | is-not-empty)
+    if $is_nvim {
+        return ""
+    } else {
+        let dir = ($env.PWD | str replace ( $nu.home-path | str replace --all '\' '/' ) "~")
+        return $"($dir)"
+    }
+}
+
+def create_indicator [] {
+    return "> "
+    # let is_nvim = ($env | get -o NVIM | is-not-empty)
+    # if $is_nvim {
+    #     return "> "
+    # } else {
+    #     return "> "
+    # }
+}
+
+$env.PROMPT_COMMAND = { || create_left_prompt }
+$env.PROMPT_INDICATOR = { || create_indicator }
