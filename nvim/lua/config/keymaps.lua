@@ -2,6 +2,10 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Handle the width of windows
+vim.keymap.set("n", "<M-.>", "<C-w>>", { desc = "Increase window width" })
+vim.keymap.set("n", "<M-,>", "<C-w><", { desc = "Decrease window width" })
+
 -- For quarto
 local runner = require("quarto.runner")
 vim.keymap.set("n", "<localleader>rc", runner.run_cell, { desc = "Run cell", silent = true })
