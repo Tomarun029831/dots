@@ -19,7 +19,7 @@ config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 config.default_prog = { "nu" }
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
 config.warn_about_missing_glyphs = false
-config.font_size = 10.0
+config.font_size = 9.5
 
 config.colors = {
 	background = "#000b1e",
