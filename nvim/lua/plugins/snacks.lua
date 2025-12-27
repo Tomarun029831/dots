@@ -3,6 +3,8 @@ return {
     opts = {
         explorer = { enabled = true },
         picker = {
+            hidden = true,
+            ignored = true,
             sources = {
                 explorer = {
                     layout = {

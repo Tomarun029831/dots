@@ -1,5 +1,9 @@
 return {
     "nvim-telescope/telescope.nvim",
+    find_files = {
+        no_ignore = true,
+        hidden = true,
+    },
     keys = {
       -- add a keymap to browse plugin files
       -- stylua: ignore

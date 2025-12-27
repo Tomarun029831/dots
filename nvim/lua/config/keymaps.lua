@@ -32,3 +32,14 @@ end, { desc = "Export to ipynb" })
 vim.keymap.set("n", "<localleader>qE", function()
     export_ipynb(true)
 end, { desc = "Export & Execute ipynb" })
+
+vim.keymap.set("n", "<leader><space>", function()
+    Snacks.picker.files({
+        finder = "files",
+        format = "file",
+        show_empty = true,
+        hidden = true,
+        ignored = true,
+        cwd = LazyVim.root(),
+    })
+end, { desc = "Find Files (Root Dir, No Ignore)" })
