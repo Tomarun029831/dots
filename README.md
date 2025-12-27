@@ -6,7 +6,16 @@ setx NVIM_APPNAME nvim
 setx GLAZEWM_CONFIG_PATH ~/.config/glazewm/config.yaml
 setx WEZTERM_CONFIG_FILE ~/.config/wezterm/wezterm.lua
 ```
-## C# LSP Works In Unity
+
+## Automatic Proxy Switcher with [Nushell](https://github.com/nushell/nushell) in Windows11
+Set up a Task Scheduler event trigger for
+Microsoft-Windows-NetworkProfile/Operational (Event ID: 10000),
+then execute the following command:
+```nushell
+nu ~/.config/nushell/proxy/switchProxy.nu
+```
+
+## C# LSP Works on neovim In Unity
 Regenerate the `.sln` and `.csproj` files with vscode in a Unity project
 
 ## CLI Setup for [quarto-nvim](https://github.com/quarto-dev/quarto-nvim) Working with [molten-nvim](https://github.com/benlubas/molten-nvim) Using [uv](https://github.com/astral-sh/uv) (Python project manager) in [Nushell](https://github.com/nushell/nushell)
