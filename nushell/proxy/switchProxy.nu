@@ -24,7 +24,6 @@ def switchProxyActivityBySSID [] {
 def updateLog [] {
     let pathToLog = ("~/.config/nushell/proxy/switchProxy.log" | path expand)
     let isExitLogFile = ($pathToLog | path exists)
-    print $isExitLogFile
     if $isExitLogFile == false {touch $pathToLog}
     $"(date now | format date '%Y-%m-%d %H:%M:%S')\n" | save $pathToLog --append
 }
