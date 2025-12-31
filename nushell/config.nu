@@ -21,8 +21,11 @@
 $env.config.show_banner = false;
 $env.config.shell_integration.osc133 = false
 
-# INFO: NeoVim
+# INFO: ALIAS
 def v [...args] {nvim ...$args}
+alias e = exit
+
+# INFO: NeoVim
 def create_left_prompt [] {
     let is_nvim = ($env | get -o NVIM | is-not-empty)
     if $is_nvim {

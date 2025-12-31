@@ -18,3 +18,10 @@
 # them for future reference.
 
 $env.config.buffer_editor = "nvim"
+
+$env.config.history = {
+  file_format: sqlite
+  max_size: 1000
+  sync_on_enter: true
+  isolation: true
+}

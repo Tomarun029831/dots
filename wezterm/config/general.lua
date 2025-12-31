@@ -1,4 +1,5 @@
 return {
+	check_for_updates = false,
 	-- Render method
 	front_end = "WebGpu",
 	enable_kitty_graphics = true,
