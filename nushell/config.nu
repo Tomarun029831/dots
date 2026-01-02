@@ -18,5 +18,6 @@
 # them for future reference.
 
 # INFO: ALIAS
-def v [...args] {nvim ...$args}
+alias v = nvim
 alias e = exit
+alias c = clear
