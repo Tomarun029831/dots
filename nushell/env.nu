@@ -17,7 +17,32 @@
 # You can remove these comments if you want or leave
 # them for future reference.
 
+# INFO: Shell
+$env.config.show_banner = false;
+$env.config.shell_integration.osc133 = false
+
+# INFO: NeoVim
 $env.config.buffer_editor = "nvim"
+def create_left_prompt [] {
+    let is_nvim = ($env | get -o NVIM | is-not-empty)
+    if $is_nvim {
+        return ""
+    } else {
+        let dir = (pwd | str replace $nu.home-path '~')
+        return $"($dir)"
+    }
+}
+def create_indicator [] {
+    return "> "
+    # let is_nvim = ($env | get -o NVIM | is-not-empty)
+    # if $is_nvim {
+    #     return "> "
+    # } else {
+    #     return "> "
+    # }
+}
+$env.PROMPT_COMMAND = { || create_left_prompt }
+$env.PROMPT_INDICATOR = { || create_indicator }
 
 $env.config.history = {
   file_format: sqlite
