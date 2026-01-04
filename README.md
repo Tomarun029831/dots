@@ -16,19 +16,10 @@ nu ~/.config/nushell/proxy/switchProxy.nu
 ```
 
 ## C# LSP Works on neovim In Unity
-Regenerate the `.sln` and `.csproj` files with vscode in a Unity project  
-Edit>Preferences>External Tools
-
-### .NET Framework 4.7.1 Developer Pack
-
-Unityが生成するプロジェクトファイルを解析するために必須です。
-
+### Install .NET Framework 4.7.1 Developer Pack
 * **ダウンロード:** [Microsoft公式サイト](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471) から **Developer Pack** を入手してインストール。
 
-### OmniSharp (v1.38.2)
-
-最新版ではなく、Unityとの互換性が高い特定の古いバージョンを使用します。
-
+### Install OmniSharp (v1.38.2)
 * **ダウンロード:** [OmniSharp Roslyn v1.38.2](https://www.google.com/search?q=https://github.com/OmniSharp/omnisharp-roslyn/releases/tag/v1.38.2) から `omnisharp-win-x64.zip` を取得。
 * **配置場所:** `~\Documents\Library\omnisharp-win-x64`
 ---
@@ -45,7 +36,7 @@ return {
     opts = function(_, opts)
         opts.servers = opts.servers or {}
 
-        local omnisharp_bin = "C:/Users/humti/Documents/Library/omnisharp-win-x64/OmniSharp.exe"
+        local omnisharp_bin = "~/Documents/Library/omnisharp-win-x64/OmniSharp.exe"
 
         -- INFO: For Unity CSharp
         opts.servers.omnisharp = {
