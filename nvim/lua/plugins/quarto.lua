@@ -1,5 +1,6 @@
 return {
     "quarto-dev/quarto-nvim",
+    lazy = true,
     dependencies = {
         "jmbuhr/otter.nvim",
         "nvim-treesitter/nvim-treesitter",

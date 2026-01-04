@@ -1,6 +1,6 @@
 return {
     "RaafatTurki/hex.nvim",
-    lazy = false,
+    lazy = true, -- HACK:
     -- commit = "dc51e5d67fc994380b7c7a518b6b625cde4b3062", -- stable
     config = function()
         require("hex").setup({

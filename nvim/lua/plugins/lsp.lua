@@ -24,6 +24,7 @@ local getPythonPath = function()
     return "python"
 end
 vim.g.python3_host_prog = getPythonPath()
+
 -- HACK: Normal
 return {
     "neovim/nvim-lspconfig",

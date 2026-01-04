@@ -1,5 +1,6 @@
 return {
     "nvim-telescope/telescope.nvim",
+    lazy = true,
     find_files = {
         no_ignore = true,
         hidden = true,

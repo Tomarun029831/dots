@@ -1,5 +1,6 @@
 return {
     "benlubas/molten-nvim",
+    lazy = true,
     build = ":UpdateRemotePlugins",
 
     dependencies = "willothy/wezterm.nvim",
