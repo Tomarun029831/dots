@@ -36,9 +36,8 @@ return {
     opts = function(_, opts)
         opts.servers = opts.servers or {}
 
-        local omnisharp_bin = "~/Documents/Library/omnisharp-win-x64/OmniSharp.exe"
-
         -- INFO: For Unity CSharp
+        local omnisharp_bin = vim.fn.expand("~/Documents/Library/omnisharp-win-x64/OmniSharp.exe")
         opts.servers.omnisharp = {
             cmd = {
                 omnisharp_bin,
