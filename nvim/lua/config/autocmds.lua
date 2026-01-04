@@ -9,7 +9,15 @@
 
 -- vim.cmd("colorscheme tokyonight-night")
 
-vim.lsp.set_log_level("ERROR")
+-- INFO: LSP LOG
+-- vim.lsp.set_log_level("ERROR")
+local log_path = vim.lsp.get_log_path()
+local max_size = 1024 * 1024 -- 1 MB
+local stat = vim.uv.fs_stat(log_path)
+if stat and stat.size > max_size then
+    os.remove(log_path)
+    vim.notify("LSP log file was too large and has been cleared.", vim.log.levels.INFO)
+end
 
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "markdown", "quarto" },
