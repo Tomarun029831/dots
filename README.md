@@ -25,7 +25,7 @@ nu ~/.config/nushell/proxy/switchProxy.nu
 ---
 
 ```powershell
-Get-ChildItem -Path "C:\Users\humti\Documents\Library\omnisharp-win-x64" -Recurse | Unblock-File
+Get-ChildItem -Path "C:\Users\<Username>\Documents\Library\omnisharp-win-x64" -Recurse | Unblock-File
 ```
 
 ---
