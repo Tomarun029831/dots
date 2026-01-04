@@ -30,7 +30,7 @@ Unityが生成するプロジェクトファイルを解析するために必須
 最新版ではなく、Unityとの互換性が高い特定の古いバージョンを使用します。
 
 * **ダウンロード:** [OmniSharp Roslyn v1.38.2](https://www.google.com/search?q=https://github.com/OmniSharp/omnisharp-roslyn/releases/tag/v1.38.2) から `omnisharp-win-x64.zip` を取得。
-* **配置場所:** `C:\Users\humti\Documents\Library\omnisharp-win-x64`
+* **配置場所:** `~\Documents\Library\omnisharp-win-x64`
 ---
 
 ```powershell
