@@ -31,6 +31,29 @@ return {
     opts = function(_, opts)
         opts.servers = opts.servers or {}
 
+        -- INFO: For CSharp
+        local omnisharp_bin = vim.fn.expand("~/Documents/Library/omnisharp-win-x64/OmniSharp.exe")
+        opts.servers.omnisharp = {
+            cmd = {
+                omnisharp_bin,
+                "--languageserver",
+                "--hostPID",
+                tostring(vim.fn.getpid()),
+            },
+            settings = {
+                MsBuild = {
+                    LoadProjectsOnDemand = false,
+                },
+                RoslynExtensionsOptions = {
+                    enableDecompilationSupport = true,
+                },
+            },
+            -- enable_roslyn_analyzers = true,
+            -- organize_imports_on_format = true,
+            -- enable_import_completion = false,
+            -- root_dir = require("lspconfig.util").root_pattern("*.sln", "*.csproj", ".git"),
+        }
+
         -- INFO: For python
         opts.servers.pyright = {
             settings = {
