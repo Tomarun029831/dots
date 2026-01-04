@@ -52,19 +52,21 @@ return {
             cmd = {
                 omnisharp_bin,
                 "--languageserver",
-                "--hostPID", tostring(vim.fn.getpid()),
+                "--hostPID",
+                tostring(vim.fn.getpid()),
             },
             settings = {
                 MsBuild = {
                     LoadProjectsOnDemand = false,
                 },
                 RoslynExtensionsOptions = {
-                    enableDecompilationSupport = true, -- ライブラリのソースコード表示を可能にする
+                    enableDecompilationSupport = true,
                 },
             },
-            enable_roslyn_analyzers = true,
-            organize_imports_on_format = true,
-            root_dir = require("lspconfig.util").root_pattern("*.sln", "*.csproj", ".git"),
+            -- enable_roslyn_analyzers = true,
+            -- organize_imports_on_format = true,
+            -- enable_import_completion = false,
+            -- root_dir = require("lspconfig.util").root_pattern("*.sln", "*.csproj", ".git"),
         }
     end,
 }
