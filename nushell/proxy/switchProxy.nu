@@ -20,16 +20,19 @@ def isSchoolSSID [] {
 def switchProxyActivityBySSID [] {
     let next_status = if (isSchoolSSID) { 1 } else { 0 }
     let current_status = hasProxyEnabled
-    updateLog
-    if $current_status == $next_status { return }
+    if $current_status == $next_status {
+        updateLog (if $next_status == 1 {"Proxy is already enabled"} else {"Proxy is already disabled"})
+        return
+    }
+    updateLog (if $next_status == 1 {"Activate Proxy"} else {"Deactive Proxy"})
     reg.exe add 'HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings' /v ProxyEnable /t REG_DWORD /d $next_status /f
 }
 
-def updateLog [] {
+def updateLog [msg] {
     let pathToLog = ("~/.config/nushell/proxy/switchProxy.log" | path expand)
     let isExitLogFile = ($pathToLog | path exists)
     if $isExitLogFile == false {touch $pathToLog}
-    $"(date now | format date '%Y-%m-%d %H:%M:%S')\n" | save $pathToLog --append
+    $"[(date now | format date '%Y-%m-%d %H:%M:%S')] ($msg)\n" | save $pathToLog --append
 }
 
 switchProxyActivityBySSID
