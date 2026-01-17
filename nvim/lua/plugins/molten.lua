@@ -2,6 +2,8 @@ return {
     "benlubas/molten-nvim",
     lazy = true,
     build = ":UpdateRemotePlugins",
+    event = { "BufReadPre", "BufNewFile" },
+    ft = { "quarto" },
 
     dependencies = "willothy/wezterm.nvim",
     init = function()
@@ -19,6 +21,6 @@ return {
 
         vim.g.molten_split_direction = "right" --direction of the output window, options are "right", "left", "top", "bottom"
         vim.g.molten_split_size = 40 --(0-100) % size of the screen dedicated to the output window
-        vim.g.molten_output_win_zindex = 50
+        vim.g.molten_output_win_zindex = 500
     end,
 }
