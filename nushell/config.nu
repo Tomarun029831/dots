@@ -21,3 +21,4 @@
 alias v = nvim
 alias e = exit
 alias c = clear
+def l [] {ls -a}
