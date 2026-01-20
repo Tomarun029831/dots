@@ -28,7 +28,7 @@ def create_left_prompt [] {
     if $is_nvim {
         return ""
     } else {
-        let dir = (pwd | str replace $nu.home-path '~')
+        let dir = (pwd | str replace $nu.home-dir '~')
         return $"($dir)"
     }
 }
