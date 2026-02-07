@@ -26,10 +26,10 @@ def create_left_prompt [] {
     let gitbranch = (do { ^$git_path 'branch' '--show-current' } | complete | get stdout | str trim)
     let git_display = if ($gitbranch | is-empty) { " \u{f418} --No Branch--" } else { $" \u{f418} ($gitbranch)" }
 
-    return $"|- ($dir_display)($git_display)\n|"
+    return $"┏ ($dir_display)($git_display)\n┗"
 }
 def create_indicator [] {
-    return "-> "
+    return "> "
 }
 
 $env.PROMPT_COMMAND = { || create_left_prompt }
