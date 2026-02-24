@@ -10,9 +10,9 @@
 -- vim.cmd("colorscheme tokyonight-night")
 
 -- INFO: LSP LOG
--- vim.lsp.set_log_level("ERROR")
+vim.lsp.set_log_level("ERROR")
 local log_path = vim.lsp.get_log_path()
-local max_size = 1024 * 1024 -- 1 MB
+local max_size = 1024 * 1024 * 10
 local stat = vim.uv.fs_stat(log_path)
 if stat and stat.size > max_size then
     os.remove(log_path)
