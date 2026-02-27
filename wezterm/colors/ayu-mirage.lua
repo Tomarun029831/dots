@@ -26,4 +26,8 @@ return {
 		"#95E6CB",
 		"#FFFFFF",
 	},
+
+	tab_bar = {
+		inactive_tab_edge = "none",
+	},
 }
