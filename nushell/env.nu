@@ -41,7 +41,7 @@ $env.PROMPT_COMMAND = { create_left_prompt }
 $env.PROMPT_COMMAND_RIGHT = {date now | format date "%Y-%m-%d %H:%M:%S" }
 
 $env.config.history = {
-  file_format: sqlite
+  file_format: plaintext
   max_size: 1000
   sync_on_enter: true
   isolation: true
