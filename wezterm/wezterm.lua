@@ -17,7 +17,7 @@ apply_config("config.general")
 apply_config("config.appearance")
 
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
-config.colors = require("colors.cybercube")
+config.colors = require("colors.neovim-default")
 config.keys = require("config.bindings")
 
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_lower_right_triangle
