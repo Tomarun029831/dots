@@ -1,10 +1,10 @@
-vim.o.number=true
-vim.o.relativenumber=true
-vim.o.wrap=false
-vim.o.tabstop=4
-vim.o.swapfile=false
-vim.o.winborder="rounded"
-vim.g.mapleader=" "
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.wrap = false
+vim.o.tabstop = 4
+vim.o.swapfile = false
+vim.o.winborder = 'bold'
+vim.g.mapleader = ' '
 
 -- window movements
 vim.keymap.set('n', '<C-j>', '<C-w>j')
@@ -23,7 +23,11 @@ vim.lsp.enable({'lua_ls', 'clangd'})
 
 -- auto-completion
 require('blink.cmp').setup({
-		keymap = { preset = 'default' }, -- Tab / Shift-Tab / Enter / C-n / C-p
+		keymap = {
+				['<CR>'] = { 'accept', 'fallback' },
+				['<Tab>'] = { 'select_next', 'snippet_forward', 'fallback' },
+				['<S-Tab>'] = { 'select_prev', 'snippet_backward', 'fallback' }
+		},
 		sources = {
 				default = { 'lsp', 'path', 'snippets', 'buffer' },
 		},
@@ -32,5 +36,4 @@ require('blink.cmp').setup({
 				ghost_text = { enabled = true },
 		},
 })
-
 
