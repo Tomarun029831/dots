@@ -19,9 +19,7 @@
 
 # INFO: ALIAS
 alias v = nvim
+alias vi = nvim --clean
 alias e = exit
 alias c = clear
 def l [] {ls **/*}
-
-# INFO:
-alias vcpkg = ^("~/Downloads/vcpkg/vcpkg.exe" | path expand)
