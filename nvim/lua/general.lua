@@ -23,3 +23,4 @@ vim.diagnostic.config({
 })
 require('mini.indentscope').setup()
 require('mini.tabline').setup()
+vim.g.lazygit_floating_window_scaling_factor = 1

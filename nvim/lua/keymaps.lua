@@ -38,4 +38,5 @@ vim.keymap.set('n', '<leader>e', function ()
 end)
 vim.keymap.set('n', '<leader> ', MiniPick.builtin.files)
 vim.keymap.set('n', '<leader>/', MiniPick.builtin.grep_live)
-
+-- open lazygit
+vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>')
