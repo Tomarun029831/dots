@@ -14,6 +14,10 @@ vim.o.tabstop = 4
 vim.o.swapfile = false
 vim.o.winborder = 'bold'
 vim.g.mapleader = ' '
+require('mini.indentscope').setup()
+require('mini.tabline').setup()
+vim.g.lazygit_floating_window_scaling_factor = 1
+
 vim.diagnostic.config({
   underline = true,
   virtual_text = {
@@ -21,6 +25,21 @@ vim.diagnostic.config({
   },
   virtual_lines = false,
 })
-require('mini.indentscope').setup()
-require('mini.tabline').setup()
-vim.g.lazygit_floating_window_scaling_factor = 1
+require('todo-comments').setup()
+local qf_auto_update_group = vim.api.nvim_create_augroup("QFAutoUpdate", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePost", {
+		group = qf_auto_update_group,
+		callback = function()
+				for _, win in ipairs(vim.fn.getwininfo()) do
+						local is_normal = not (win.quickfix == 1 and win.loclist == 0)
+						if is_normal then goto continue end
+						if vim.w[win.winid].quickfix_title == 'Diagnostics' then
+								vim.diagnostic.setqflist()
+						else
+								vim.cmd("TodoQuickFix")
+						end
+						::continue::
+				end
+		end,
+})
+

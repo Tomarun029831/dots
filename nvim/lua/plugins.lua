@@ -7,6 +7,9 @@ vim.pack.add({
 	{src='https://github.com/folke/tokyonight.nvim'},
 	{src='https://github.com/nvim-mini/mini.indentscope', version='stable'},
 	{src='https://github.com/nvim-mini/mini.tabline', version='stable'},
+	-- highlight comments
+	{src='https://github.com/folke/todo-comments.nvim'},
+	{src='https://github.com/nvim-lua/plenary.nvim'}, -- the dependency of todo-comments
 	-- utility editing
 	{src='https://github.com/nvim-mini/mini.pairs', version='stable'},
 	{src='https://github.com/nvim-mini/mini.surround', version='stable'},

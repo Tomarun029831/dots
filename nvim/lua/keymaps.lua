@@ -20,18 +20,27 @@ vim.keymap.set('n', '<C-l>', '<C-w>l')
 -- change a buffer
 vim.keymap.set('n', 'L', '<cmd>bnext<CR>')
 vim.keymap.set('n', 'H', '<cmd>bprevious<CR>')
--- diagnostic
+-- open diagnostic
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
-local function toggle_qf_diagnostics()
-  for _, win in ipairs(vim.fn.getwininfo()) do
-    if win.quickfix == 1 and win.loclist == 0 then
-      vim.cmd('cclose')
-      return
-    end
-  end
-  vim.diagnostic.setqflist()
-end
-vim.keymap.set('n', '<leader>xx', toggle_qf_diagnostics)
+vim.keymap.set('n', '<leader>x', function ()
+		for _, win in ipairs(vim.fn.getwininfo()) do
+				if win.quickfix == 1 and win.loclist == 0 then
+						vim.cmd('cclose')
+						return
+				end
+		end
+		vim.diagnostic.setqflist()
+end)
+-- open todo-list
+vim.keymap.set('n', '<leader>t', function ()
+		for _, win in ipairs(vim.fn.getwininfo()) do
+				if win.quickfix == 1 and win.loclist == 0 then
+						vim.cmd('cclose')
+						return
+				end
+		end
+		vim.cmd('TodoQuickFix')
+end)
 -- toggle file explore
 vim.keymap.set('n', '<leader>e', function ()
 		if MiniFiles.close() == nil then MiniFiles.open() end
@@ -40,3 +49,4 @@ vim.keymap.set('n', '<leader> ', MiniPick.builtin.files)
 vim.keymap.set('n', '<leader>/', MiniPick.builtin.grep_live)
 -- open lazygit
 vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>')
+
