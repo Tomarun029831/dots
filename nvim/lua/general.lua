@@ -21,4 +21,5 @@ vim.diagnostic.config({
   },
   virtual_lines = false,
 })
-
+require('mini.indentscope').setup()
+require('mini.tabline').setup()
