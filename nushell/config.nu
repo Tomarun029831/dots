@@ -23,3 +23,5 @@ alias vi = nvim --clean
 alias e = exit
 alias c = clear
 def l [] {ls **/*}
+
+alias vcpkg = ^('~/vcpkg/vcpkg.exe' | path expand)
