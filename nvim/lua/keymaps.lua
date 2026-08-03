@@ -20,6 +20,7 @@ vim.keymap.set('n', '<C-l>', '<C-w>l')
 -- change a buffer
 vim.keymap.set('n', 'L', '<cmd>bnext<CR>')
 vim.keymap.set('n', 'H', '<cmd>bprevious<CR>')
+vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<CR>')
 -- open diagnostic
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>x', function ()
