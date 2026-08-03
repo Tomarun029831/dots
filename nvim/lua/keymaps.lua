@@ -53,11 +53,19 @@ vim.keymap.set('n', '<leader>t', function ()
 	vim.cmd('TodoQuickFix')
 end)
 -- toggle file explore
+local function get_root()
+  local root = vim.fs.root(0, { '.git', 'Cargo.toml', 'package.json', 'Makefile' })
+  return root or vim.fn.getcwd()
+end
 vim.keymap.set('n', '<leader>e', function ()
-		if MiniFiles.close() == nil then MiniFiles.open() end
+		if MiniFiles.close() == nil then MiniFiles.open(vim.api.nvim_buf_get_name(0)) end
 end)
-vim.keymap.set('n', '<leader> ', MiniPick.builtin.files)
-vim.keymap.set('n', '<leader>/', MiniPick.builtin.grep_live)
+vim.keymap.set('n', '<leader> ', function ()
+	MiniPick.builtin.files(nil, {source = {cwd=get_root()}})
+end)
+vim.keymap.set('n', '<leader>/', function ()
+	MiniPick.builtin.grep_live(nil, {source = {cwd=get_root()}})
+end)
 -- open lazygit
-vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>')
+vim.keymap.set('n', '<leader>gg', '<cmd>LazyGitCurrentFile<CR>')
 
