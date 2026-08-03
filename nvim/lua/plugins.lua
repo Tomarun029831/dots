@@ -17,7 +17,10 @@ local plugins = {
 	{src='https://github.com/nvim-mini/mini.files', version='stable'},
 	{src='https://github.com/nvim-mini/mini.pick', version='stable'},
 	-- git integration
-	{src='https://github.com/kdheepak/lazygit.nvim'}
+	{src='https://github.com/kdheepak/lazygit.nvim'},
+	{src='https://github.com/nvim-mini/mini.diff'},
+	-- treesitter
+	{src='https://github.com/nvim-treesitter/nvim-treesitter'}
 }
 vim.pack.add(plugins)
 return plugins
