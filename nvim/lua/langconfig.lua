@@ -1,7 +1,7 @@
 local lang_configs = {
 	{ filetypes = { 'lua' }, lsp = 'lua_ls', treesitters = { 'lua' } },
 	{ filetypes = { 'c', 'cpp' }, lsp = 'clangd', treesitters = { 'c', 'cpp' } },
-	{ filetypes = { 'nu' }, lsp = nil, treesitters = { 'nu' } },
+	{ filetypes = { 'nu' }, lsp = 'nushell', external = true, treesitters = { 'nu' } },
 	{ filetypes = { 'html' }, lsp = 'html', treesitters = { 'html' } },
 	{ filetypes = { 'css', 'scss' }, lsp = 'cssls', treesitters = { 'css', 'scss' } },
 	{
@@ -12,14 +12,20 @@ local lang_configs = {
 	{ filetypes = { 'markdown' }, lsp = nil, treesitters = { 'markdown', 'markdown_inline' } },
 }
 
-local lsp_servers = {}
+local lsps = {}
+local mason_lsps = {}
 local treesitters = {}
 local filetypes = {}
 
 for _, config in ipairs(lang_configs) do
 	if config.lsp then
-		table.insert(lsp_servers, config.lsp)
+		table.insert(lsps, config.lsp)
+		local is_under_mason = not config.external
+		if is_under_mason then
+			table.insert(mason_lsps, config.lsp)
+		end
 	end
+
 	for _, ts in ipairs(config.treesitters) do
 		table.insert(treesitters, ts)
 	end
@@ -29,7 +35,8 @@ for _, config in ipairs(lang_configs) do
 end
 
 return {
-	lsp_servers = lsp_servers,
+	lsps = lsps,
+	mason_lsps = mason_lsps,
 	treesitters = treesitters,
 	filetypes = filetypes,
 }
