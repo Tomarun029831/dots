@@ -1,3 +1,4 @@
+-- s <Tab> vim.snippet.jump if active, otherwise <Tab>
 require('blink.cmp').setup({
 	keymap = {
 		['<CR>'] = { 'accept', 'fallback' },
