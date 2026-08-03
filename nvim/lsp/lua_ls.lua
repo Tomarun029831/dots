@@ -1,8 +1,8 @@
 return {
-		settings = {
-				Lua = {
-						diagnostics = { globals = { 'vim' }, },
-						workspace = { library = { vim.env.VIMRUNTIME, }, }
-				}
+	settings = {
+		Lua = {
+			diagnostics = { globals = { 'vim' }, },
+			workspace = { library = { vim.env.VIMRUNTIME, }, }
 		}
+	}
 }

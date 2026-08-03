@@ -24,13 +24,13 @@ vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<CR>')
 -- open diagnostic
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>x', function ()
-		for _, win in ipairs(vim.fn.getwininfo()) do
-				if win.quickfix == 1 and win.loclist == 0 then
-						vim.cmd('cclose')
-						return
-				end
+	for _, win in ipairs(vim.fn.getwininfo()) do
+		if win.quickfix == 1 and win.loclist == 0 then
+			vim.cmd('cclose')
+			return
 		end
-		vim.diagnostic.setqflist()
+	end
+	vim.diagnostic.setqflist()
 end)
 -- use features of a lsp
 -- type ':map gr' to see the keybind
@@ -44,13 +44,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 -- open todo-list
 vim.keymap.set('n', '<leader>t', function ()
-		for _, win in ipairs(vim.fn.getwininfo()) do
-				if win.quickfix == 1 and win.loclist == 0 then
-						vim.cmd('cclose')
-						return
-				end
+	for _, win in ipairs(vim.fn.getwininfo()) do
+		if win.quickfix == 1 and win.loclist == 0 then
+			vim.cmd('cclose')
+			return
 		end
-		vim.cmd('TodoQuickFix')
+	end
+	vim.cmd('TodoQuickFix')
 end)
 -- toggle file explore
 vim.keymap.set('n', '<leader>e', function ()
