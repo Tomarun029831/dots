@@ -16,6 +16,7 @@ vim.o.winborder = 'bold'
 vim.g.mapleader = ' '
 require('mini.indentscope').setup()
 require('mini.tabline').setup()
+require('mini.diff').setup()
 vim.g.lazygit_floating_window_scaling_factor = 1
 
 vim.diagnostic.config({
@@ -46,7 +47,6 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 vim.api.nvim_create_user_command('UpdatePlugins', function ()
 	vim.pack.update()
 end, {nargs=0, desc = "To confirm all updates execute :write. To discard updates execute :quit."})
-
 vim.api.nvim_create_user_command('RefreshPlugins', function()
 		if vim.pack.get then
 				local orphans = {}
