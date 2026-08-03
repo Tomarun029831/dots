@@ -45,7 +45,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 
 vim.api.nvim_create_user_command('UpdatePlugins', function ()
 	vim.pack.update()
-end, {nargs=0})
+end, {nargs=0, desc = "To confirm all updates execute :write. To discard updates execute :quit."})
 
 vim.api.nvim_create_user_command('RefreshPlugins', function()
 		if vim.pack.get then
