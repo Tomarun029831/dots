@@ -2,6 +2,7 @@ local plugins = {
 	-- lsp and auto-completion
 	{src='https://github.com/neovim/nvim-lspconfig'},
 	{src='https://github.com/mason-org/mason.nvim'},
+	{src='https://github.com/mason-org/mason-lspconfig.nvim'},
 	{src='https://github.com/Saghen/blink.cmp', version='v1'},
 	-- colorscheme
 	{src='https://github.com/folke/tokyonight.nvim'},
