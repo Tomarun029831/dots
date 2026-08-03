@@ -1,9 +1,8 @@
 local plugins = {
-	-- lsp and auto-completion
+	-- lsp and lsp-manager
 	{src='https://github.com/neovim/nvim-lspconfig'},
 	{src='https://github.com/mason-org/mason.nvim'},
 	{src='https://github.com/mason-org/mason-lspconfig.nvim'},
-	{src='https://github.com/Saghen/blink.cmp', version='v1'},
 	-- colorscheme
 	{src='https://github.com/folke/tokyonight.nvim'},
 	{src='https://github.com/nvim-mini/mini.indentscope', version='stable'},
@@ -20,8 +19,8 @@ local plugins = {
 	-- git integration
 	{src='https://github.com/kdheepak/lazygit.nvim'},
 	{src='https://github.com/nvim-mini/mini.diff'},
-	-- treesitter
-	{src='https://github.com/nvim-treesitter/nvim-treesitter'}
 }
 vim.pack.add(plugins)
+table.insert(plugins, {src='https://github.com/Saghen/blink.cmp', version='v1'}) -- auto-completion
+table.insert(plugins, {src='https://github.com/nvim-treesitter/nvim-treesitter'}) -- treesitter
 return plugins

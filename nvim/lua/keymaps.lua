@@ -58,7 +58,7 @@ local function get_root()
   return root or vim.fn.getcwd()
 end
 vim.keymap.set('n', '<leader>e', function ()
-		if MiniFiles.close() == nil then MiniFiles.open(vim.api.nvim_buf_get_name(0)) end
+	if MiniFiles.close() == nil then MiniFiles.open(vim.api.nvim_buf_get_name(0)) end
 end)
 vim.keymap.set('n', '<leader> ', function ()
 	MiniPick.builtin.files(nil, {source = {cwd=get_root()}})
