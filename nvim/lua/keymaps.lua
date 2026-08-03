@@ -32,6 +32,16 @@ vim.keymap.set('n', '<leader>x', function ()
 		end
 		vim.diagnostic.setqflist()
 end)
+-- use features of a lsp
+-- type ':map gr' to see the keybind
+vim.api.nvim_create_autocmd('LspAttach', {
+	callback = function(args)
+		local opts = { buffer = args.buf }
+		vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+		vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
+	end,
+})
+
 -- open todo-list
 vim.keymap.set('n', '<leader>t', function ()
 		for _, win in ipairs(vim.fn.getwininfo()) do
