@@ -4,4 +4,3 @@ require('fileexplorer')
 require('keymaps')
 require('lsps')
 require('completion')
-

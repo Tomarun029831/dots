@@ -1,4 +1,4 @@
-vim.pack.add({
+local plugins = {
 	-- lsp and auto-completion
 	{src='https://github.com/neovim/nvim-lspconfig'},
 	{src='https://github.com/mason-org/mason.nvim'},
@@ -18,4 +18,6 @@ vim.pack.add({
 	{src='https://github.com/nvim-mini/mini.pick', version='stable'},
 	-- git integration
 	{src='https://github.com/kdheepak/lazygit.nvim'}
-})
+}
+vim.pack.add(plugins)
+return plugins

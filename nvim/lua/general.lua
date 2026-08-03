@@ -43,3 +43,21 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 		end,
 })
 
+vim.api.nvim_create_user_command('UpdatePlugins', function ()
+	vim.pack.update()
+end, {nargs=0})
+
+vim.api.nvim_create_user_command('RefreshPlugins', function()
+		if vim.pack.get then
+				local orphans = {}
+				for _, pack in ipairs(vim.pack.get()) do
+						if pack.active then goto continue end
+						table.insert(orphans, pack.spec.name)
+						::continue::
+				end
+
+				if #orphans > 0 then
+						vim.pack.del(orphans)
+				end
+		end
+end, {nargs=0})
