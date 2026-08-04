@@ -6,13 +6,19 @@ setx NVIM_APPNAME nvim
 setx GLAZEWM_CONFIG_PATH ~/.config/glazewm/config.yaml
 setx WEZTERM_CONFIG_FILE ~/.config/wezterm/wezterm.lua
 ```
-
 ## Automatic Proxy Switcher with [Nushell](https://github.com/nushell/nushell) in Windows11
 Set up a Task Scheduler event trigger for
 Microsoft-Windows-NetworkProfile/Operational (Event ID: 10000),
 then execute the following command:
 ```nushell
 nu ~/.config/nushell/proxy/switchProxy.nu
+```
+
+## Cmake LSP (cmake-language-server) Works on Neovim with Mason
+## Install cmake-language-server via Mason
+```nu
+# If a version conflict occurs (e.g., ImportError: cannot import name 'LanguageServer' from 'pygls.server'), run the following command in your terminal to fix it:
+C:\Users\<Username>\AppData\Local\nvim-data\mason\packages\cmake-language-server\venv\Scripts\pip install "pygls<1.4.0"
 ```
 
 ## C# LSP Works on neovim In Unity
