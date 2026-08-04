@@ -1,6 +1,7 @@
 local lang_configs = {
 	{ filetypes = { 'lua' }, lsp = 'lua_ls', treesitters = { 'lua' } },
 	{ filetypes = { 'c', 'cpp' }, lsp = 'clangd', treesitters = { 'c', 'cpp' } },
+	{ filetypes = { 'cmake' }, lsp = 'cmake', treesitters = { 'cmake' } },
 	{ filetypes = { 'nu' }, lsp = 'nushell', external = true, treesitters = { 'nu' } },
 	{ filetypes = { 'html' }, lsp = 'html', treesitters = { 'html' } },
 	{ filetypes = { 'css', 'scss' }, lsp = 'cssls', treesitters = { 'css', 'scss' } },
