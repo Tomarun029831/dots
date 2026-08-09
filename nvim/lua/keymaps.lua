@@ -19,6 +19,9 @@ vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-h>', '<C-w>h')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
+-- split window
+vim.keymap.set('n', '<leader>wh', '<cmd>split<CR>')
+vim.keymap.set('n', '<leader>wv', '<cmd>vsplit<CR>')
 -- change a buffer
 vim.keymap.set('n', 'L', '<cmd>bnext<CR>')
 vim.keymap.set('n', 'H', '<cmd>bprevious<CR>')
