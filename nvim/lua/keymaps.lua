@@ -12,6 +12,8 @@ require('mini.pick').setup({
 	}
 })
 
+-- stop highlight
+vim.keymap.set('n', '<ESC>', '<cmd>nohlsearch<CR>')
 -- cursor movements on windows
 vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
