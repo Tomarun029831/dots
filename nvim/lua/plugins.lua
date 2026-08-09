@@ -1,4 +1,6 @@
 local plugins = {
+	-- wakatime
+	{src='https://github.com/wakatime/vim-wakatime'},
 	-- lsp and lsp-manager
 	{src='https://github.com/neovim/nvim-lspconfig'},
 	{src='https://github.com/mason-org/mason.nvim'},
