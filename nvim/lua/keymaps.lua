@@ -12,6 +12,8 @@ require('mini.pick').setup({
 	}
 })
 
+-- escape from terminal-mode with Ctrl + /
+vim.cmd('tnoremap  <C-\\><C-n>')
 -- stop highlight
 vim.keymap.set('n', '<ESC>', '<cmd>nohlsearch<CR>')
 -- cursor movements on windows
