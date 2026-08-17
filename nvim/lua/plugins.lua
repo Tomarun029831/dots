@@ -6,7 +6,8 @@ local plugins = {
 	{src='https://github.com/mason-org/mason.nvim'},
 	{src='https://github.com/mason-org/mason-lspconfig.nvim'},
 	-- colorscheme
-	{src='https://github.com/folke/tokyonight.nvim'},
+	{src='https://github.com/marko-cerovac/material.nvim'},
+	-- decorate display
 	{src='https://github.com/nvim-mini/mini.indentscope', version='stable'},
 	{src='https://github.com/nvim-mini/mini.tabline', version='stable'},
 	-- highlight comments

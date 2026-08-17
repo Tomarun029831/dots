@@ -1,5 +1,5 @@
 vim.cmd([[
-	colorscheme tokyonight-moon
+	colorscheme material-deep-ocean
 	let g:loaded_node_provider = 0
 	let g:loaded_perl_provider = 0
 	let g:loaded_python3_provider = 0
