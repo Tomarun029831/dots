@@ -10,6 +10,7 @@ local lang_configs = {
 		lsp = 'ts_ls',
 		treesitters = { 'javascript', 'typescript', 'tsx' },
 	},
+	{ filetypes = { 'python' }, lsp = 'pyright', treesitters = { 'python' } },
 	{ filetypes = { 'markdown' }, lsp = nil, treesitters = { 'markdown', 'markdown_inline' } },
 }
 
