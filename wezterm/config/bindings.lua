@@ -13,4 +13,5 @@ return {
 	{ key = "p", mods = "SHIFT|CTRL", action = act.ActivateCommandPalette },
 	{ key = "r", mods = "SHIFT|CTRL", action = act.ReloadConfiguration },
 	{ key = "v", mods = "SHIFT|CTRL", action = act.PasteFrom("Clipboard") },
+	{ key = "c", mods = "SHIFT|CTRL", action = act.CopyTo("Clipboard") },
 }
