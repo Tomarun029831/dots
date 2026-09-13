@@ -25,6 +25,8 @@ vim.keymap.set('n', '<C-l>', '<C-w>l')
 vim.keymap.set('n', '<leader>wh', '<cmd>split<CR>')
 vim.keymap.set('n', '<leader>wv', '<cmd>vsplit<CR>')
 vim.keymap.set('n', '<leader>wq', '<cmd>close<CR>')
+vim.keymap.set('n', '<C-n>', '<cmd>vertical resize -5<CR>')
+vim.keymap.set('n', '<C-m>', '<cmd>vertical resize +5<CR>')
 -- change a buffer
 vim.keymap.set('n', 'L', '<cmd>bnext<CR>')
 vim.keymap.set('n', 'H', '<cmd>bprevious<CR>')
