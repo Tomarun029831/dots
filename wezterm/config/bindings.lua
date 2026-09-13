@@ -12,4 +12,5 @@ return {
 	{ key = "0", mods = "CTRL", action = act.ResetFontSize },
 	{ key = "p", mods = "SHIFT|CTRL", action = act.ActivateCommandPalette },
 	{ key = "r", mods = "SHIFT|CTRL", action = act.ReloadConfiguration },
+	{ key = "v", mods = "SHIFT|CTRL", action = act.PasteFrom("Clipboard") },
 }
