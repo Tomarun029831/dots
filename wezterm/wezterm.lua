@@ -17,19 +17,19 @@ apply_config("config.general")
 apply_config("config.appearance")
 
 config.disable_default_key_bindings = true
-config.colors = require("colors.neovim-default")
+config.colors = require("colors.default")
 config.keys = require("config.bindings")
 
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_lower_right_triangle
 local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_upper_left_triangle
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-	local background = "#5c6d74"
-	local foreground = "#FFFFFF"
+	local background = "#14161b"
+	local foreground = "#c4c6cd"
 	local edge_background = "none"
 	if tab.is_active then
-		background = "#ae8b2d"
-		foreground = "#FFFFFF"
+		background = "#c4c6cd"
+		foreground = "#14161b"
 	end
 	local edge_foreground = background
 	local title = "   " .. wezterm.truncate_right(tab.active_pane.title, max_width - 1) .. "   "
