@@ -16,7 +16,7 @@ end
 apply_config("config.general")
 apply_config("config.appearance")
 
-config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
+config.disable_default_key_bindings = true
 config.colors = require("colors.neovim-default")
 config.keys = require("config.bindings")
 
