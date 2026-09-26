@@ -23,14 +23,14 @@ C:\Users\<Username>\AppData\Local\nvim-data\mason\packages\cmake-language-server
 
 ## C# LSP Works on neovim In Unity
 ### In Unity
-    1. **Edit > Preferences > External Tools** を開く。
-    2. **External Script Editor** を `Visual Studio Code` (または VS 2019) に設定。
-    3. **Generate .csproj files for:** のチェックボックスを**すべてオン**にする。
-    4. **Regenerate project files** ボタンをクリック。
+    1. Open "Edit > Preferences > External Tools".
+    2. Set "External Script Editor" to "Visual Studio Code" (or VS 2019).
+    3. Check "all boxes" under "Generate .csproj files for:".
+    4. Click the "Regenerate project files" button.
 ## In Neovim
-    1. Install [roslyn-language-server](https://github.com/dotnet/roslyn) with [Mason](https://github.com/mason-org/mason.nvim)
-    2. Execute below command
+    1. Execute below command
             winget install --id=Microsoft.DotNet.SDK.10
+    2. Install [roslyn-language-server](https://github.com/dotnet/roslyn) with [Mason](https://github.com/mason-org/mason.nvim)
 
 ## CLI Setup for [quarto-nvim](https://github.com/quarto-dev/quarto-nvim) Working with [molten-nvim](https://github.com/benlubas/molten-nvim) Using [uv](https://github.com/astral-sh/uv) (Python project manager) in [Nushell](https://github.com/nushell/nushell)
 ```nushell
