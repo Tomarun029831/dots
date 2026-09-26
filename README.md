@@ -28,7 +28,7 @@ C:\Users\<Username>\AppData\Local\nvim-data\mason\packages\cmake-language-server
     3. Check "all boxes" under "Generate .csproj files for:".
     4. Click the "Regenerate project files" button.
 ## In Neovim
-    1. Execute below command
+    1. Execute below command (version of dotnet-SDK should have Compatibility with roslyn-language-server)
             winget install --id=Microsoft.DotNet.SDK.10
     2. Install [roslyn-language-server](https://github.com/dotnet/roslyn) with [Mason](https://github.com/mason-org/mason.nvim)
 
