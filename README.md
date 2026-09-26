@@ -22,58 +22,15 @@ C:\Users\<Username>\AppData\Local\nvim-data\mason\packages\cmake-language-server
 ```
 
 ## C# LSP Works on neovim In Unity
-### Install .NET Framework 4.7.1 Developer Pack
-* **ダウンロード:** [Microsoft公式サイト](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471) から **Developer Pack** を入手してインストール。
-
-### Install OmniSharp (v1.38.2)
-* **ダウンロード:** [OmniSharp Roslyn v1.38.2](https://www.google.com/search?q=https://github.com/OmniSharp/omnisharp-roslyn/releases/tag/v1.38.2) から `omnisharp-win-x64.zip` を取得。
-* **配置場所:** `~\Documents\Library\omnisharp-win-x64`
----
-
-```powershell
-Get-ChildItem -Path "C:\Users\<Username>\Documents\Library\omnisharp-win-x64" -Recurse | Unblock-File
-```
-
----
-
-```lua
-return {
-    "neovim/nvim-lspconfig",
-    opts = function(_, opts)
-        opts.servers = opts.servers or {}
-
-        -- INFO: For Unity CSharp
-        local omnisharp_bin = vim.fn.expand("~/Documents/Library/omnisharp-win-x64/OmniSharp.exe")
-        opts.servers.omnisharp = {
-            cmd = {
-                omnisharp_bin,
-                "--languageserver",
-                "--hostPID",
-                tostring(vim.fn.getpid()),
-            },
-            settings = {
-                MsBuild = {
-                    LoadProjectsOnDemand = false,
-                },
-                RoslynExtensionsOptions = {
-                    enableDecompilationSupport = true,
-                },
-            },
-            -- enable_roslyn_analyzers = true,
-            -- organize_imports_on_format = true,
-            -- enable_import_completion = false,
-            -- root_dir = require("lspconfig.util").root_pattern("*.sln", "*.csproj", ".git"),
-        }
-    end,
-}
-
-```
-
-1. **Edit > Preferences > External Tools** を開く。
-2. **External Script Editor** を `Visual Studio Code` (または VS 2019) に設定。
-3. **Generate .csproj files for:** のチェックボックスを**すべてオン**にする。
-4. **Regenerate project files** ボタンをクリック。
-
+### In Unity
+    1. **Edit > Preferences > External Tools** を開く。
+    2. **External Script Editor** を `Visual Studio Code` (または VS 2019) に設定。
+    3. **Generate .csproj files for:** のチェックボックスを**すべてオン**にする。
+    4. **Regenerate project files** ボタンをクリック。
+## In Neovim
+    1. Install [roslyn-language-server](https://github.com/dotnet/roslyn) with [Mason](https://github.com/mason-org/mason.nvim)
+    2. Execute below command
+            winget install --id=Microsoft.DotNet.SDK.10
 
 ## CLI Setup for [quarto-nvim](https://github.com/quarto-dev/quarto-nvim) Working with [molten-nvim](https://github.com/benlubas/molten-nvim) Using [uv](https://github.com/astral-sh/uv) (Python project manager) in [Nushell](https://github.com/nushell/nushell)
 ```nushell
