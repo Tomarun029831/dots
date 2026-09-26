@@ -12,7 +12,7 @@ local lang_configs = {
 	},
 	{ filetypes = { 'python' }, lsp = 'pyright', treesitters = { 'python' } },
 	{ filetypes = { 'markdown' }, lsp = nil, treesitters = { 'markdown', 'markdown_inline' } },
-	{ filetypes = { 'cs' }, lsp = 'roslyn_ls', treesitters = { 'c_sharp' } },
+	{ filetypes = { 'cs' }, lsp = 'csharp_ls@0.20.0', treesitters = { 'c_sharp' } }, -- PERF: https://github.com/razzmatazz/csharp-language-server/issues/352
 }
 
 local lsps = {}
