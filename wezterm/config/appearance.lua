@@ -7,7 +7,7 @@ return {
 	warn_about_missing_glyphs = false,
 
 	-- Font Size & Layout
-	font_size = 9.5,
+	font_size = 9,
 	line_height = 1.0,
 	cell_width = 1.0,
 
