@@ -12,6 +12,7 @@ local lang_configs = {
 	},
 	{ filetypes = { 'python' }, lsp = 'pyright', treesitters = { 'python' } },
 	{ filetypes = { 'markdown' }, lsp = nil, treesitters = { 'markdown', 'markdown_inline' } },
+	{ filetypes = { 'cs' }, lsp = 'roslyn_ls', treesitters = { 'c_sharp' } },
 }
 
 local lsps = {}
