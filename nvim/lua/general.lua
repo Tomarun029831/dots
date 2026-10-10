@@ -7,7 +7,8 @@ vim.cmd([[
 ]])
 require('vim._core.ui2').enable()
 vim.o.termguicolors = true
-vim.lsp.log_levels = 'ERROR'
+vim.lsp.log.set_level("OFF")
+
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.wrap = false
