@@ -7,7 +7,8 @@ local plugins = {
 	{src='https://github.com/mason-org/mason-lspconfig.nvim'},
 	-- colorscheme
 	-- {src='https://github.com/marko-cerovac/material.nvim'},
-	{src='https://github.com/kyazdani42/blue-moon.git'},
+	-- {src='https://github.com/kyazdani42/blue-moon.git'},
+	{src='https://github.com/Skullamortis/forest.nvim.git'},
 	-- decorate display
 	{src='https://github.com/nvim-mini/mini.indentscope', version='stable'},
 	{src='https://github.com/nvim-mini/mini.tabline', version='stable'},
