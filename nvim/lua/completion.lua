@@ -2,7 +2,7 @@
 vim.api.nvim_create_autocmd('InsertEnter', { -- PERF: blink.cmp and mini.pairs will be loaded right on time
     once = true,
     callback = function()
-		vim.pack.add({{src='https://github.com/Saghen/blink.cmp', version='v1'}}) -- HACK: see plugins.lua
+		vim.pack.add({{src='https://github.com/Saghen/blink.cmp'}}) -- HACK: see plugins.lua
         require('blink.cmp').setup({
             keymap = {
                 ['<CR>'] = { 'accept', 'fallback' },
