@@ -12,7 +12,10 @@ local lang_configs = {
 	},
 	{ filetypes = { 'python' }, lsp = 'pyright', treesitters = { 'python' } },
 	{ filetypes = { 'markdown' }, lsp = nil, treesitters = { 'markdown', 'markdown_inline' } },
-	{ filetypes = { 'cs' }, lsp = 'csharp_ls@0.20.0', treesitters = { 'c_sharp' } }, -- PERF: https://github.com/razzmatazz/csharp-language-server/issues/352
+
+	-- PERF: https://github.com/razzmatazz/csharp-language-server/issues/352
+	-- INFO: https://docs.unity.com/en-us/engine/6000.3/manual/programming-environment/overview-of-dot-net-in-unity/csharp-compiler
+	{ filetypes = { 'cs' }, lsp = 'csharp_ls@0.20.0', treesitters = { 'c_sharp' } },
 }
 
 local lsps = {}
