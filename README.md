@@ -25,7 +25,7 @@ C:\Users\<Username>\AppData\Local\nvim-data\mason\packages\cmake-language-server
 ### In Unity
 - 1. Open "Edit > Preferences > External Tools".
 - 2. Set "External Script Editor" to "Visual Studio Code" (or VS 2019).
-- 3. Check "all boxes" under "Generate .csproj files for:".
+- 3. UnCheck "all boxes" under "Generate .csproj files for:".
 - 4. Click the "Regenerate project files" button.
 ## In Neovim
 - 1. Run the following command (Ensure your .NET SDK version is compatible with csharp-language-server):
